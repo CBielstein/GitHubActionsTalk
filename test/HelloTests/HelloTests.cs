@@ -24,13 +24,23 @@ namespace HelloTests
         [Theory]
         [InlineData("Cameron")]
         [InlineData("Fraveshi")]
-        public async Task TestNameQueryStringAsync(string name)
+        public async Task TestNameQueryString(string name)
         {
             var response = await client.GetAsync($"/hello?name={name}");
             var message = await response.Content.ReadAsStringAsync();
 
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
             Assert.Equal($"Hello, {name}", message);
+        }
+
+        [Fact]
+        public async Task TestNoName()
+        {
+            var response = await client.GetAsync("/hello");
+            var message = await response.Content.ReadAsStringAsync();
+
+            Assert.Equal(HttpStatusCode.OK, response.StatusCode);
+            Assert.Equal($"Hello, World", message);
         }
     }
 }
