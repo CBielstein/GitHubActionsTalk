@@ -1,7 +1,3 @@
-# Build and prepare the app for deployment
-rm -rf published
-dotnet publish --configuration Release --runtime centos.8-x64 --no-self-contained -o published src/Hello/Hello.csproj
-
 # Stop current service
 ssh $USER_HOST systemctl stop helloapp
 
@@ -9,7 +5,7 @@ ssh $USER_HOST systemctl stop helloapp
 scp -Cp deploy/helloapp.service $USER_HOST:/etc/systemd/system/helloapp.service
 
 # rsync to copy files
-rsync -az --delete -e ssh published/ $USER_HOST:/web/hello
+rsync -az --delete -e ssh $1 $USER_HOST:/web/hello
 
 # Start/resume service
 ssh $USER_HOST systemctl daemon-reload
