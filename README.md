@@ -1,11 +1,13 @@
 # GitHubActionsTalk
-Code to accompany a conference talk on an intro to GitHub Actions.
+
+Demo code for a [talk on GitHub Actions](https://osem.seagl.org/conferences/seagl2020/program/proposals/769) delivered at [SeaGL](https://seagl.org) 2020.
 
 ## Deployment
 
 ### Host Setup
 
 1. Install [ASP.NET Core Runtime 3.1 for Linux](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+1. Install rsync: (`sudo yum install -y rsynd` in CentOS8)
 1. Configure firewall to allow access to 80/tcp (CentOS8 commands below)
     * `sudo firewall-cmd --zone=public --add-port 80/tcp --permanent`
     * `sudo firewall-cmd --reload`
