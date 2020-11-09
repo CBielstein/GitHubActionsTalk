@@ -1,5 +1,4 @@
-﻿using System;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace Hello.Controllers
 {
@@ -10,7 +9,7 @@ namespace Hello.Controllers
         [HttpGet]
         public string Get([FromQuery] string name)
         {
-            return $"Hello, {(name ?? "World")}{Environment.NewLine}";
+            return "Hello, " + (name ?? "World");
         }
     }
 }
