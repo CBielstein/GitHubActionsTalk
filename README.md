@@ -7,7 +7,7 @@ Demo code for a [talk on GitHub Actions](https://osem.seagl.org/conferences/seag
 ### Host Setup
 
 1. Install [ASP.NET Core Runtime 3.1 for Linux](https://dotnet.microsoft.com/download/dotnet-core/3.1)
-1. Install rsync: (`sudo yum install -y rsynd` in CentOS8)
+1. Install rsync: (`sudo yum install -y rsync` in CentOS8)
 1. Configure firewall to allow access to 80/tcp (CentOS8 commands below)
     * `sudo firewall-cmd --zone=public --add-port 80/tcp --permanent`
     * `sudo firewall-cmd --reload`
