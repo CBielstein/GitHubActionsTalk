@@ -13,6 +13,8 @@ User=root
 Environment=ASPNETCORE_ENVIRONMENT=Production
 Environment=DOTNET_PRINT_TELEMETRY_MESSAGE=false
 Environment=DOTNET_ROOT=/usr/lib64/dotnet
+Environment=ASPNETCORE_URLS=http://*:80
+AmbientCapabilities=CAP_NET_BIND_SERVICE
 
 [Install]
 WantedBy=multi-user.target
