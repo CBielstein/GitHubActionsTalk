@@ -3,6 +3,9 @@ dotnet publish --configuration Release --runtime centos.8-x64 --no-self-containe
 # Stop current service
 ssh $USER_HOST systemctl stop helloapp
 
+# Place systemd unit file
+scp -Cp deploy/helloapp.service $USER_HOST:/etc/systemd/system/helloapp.service
+
 # rsync to copy files
 rsync -az --delete -e ssh published/ $USER_HOST:/web/hello
 
