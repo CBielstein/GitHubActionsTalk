@@ -7,9 +7,9 @@ namespace Hello.Controllers
     public class HelloController : ControllerBase
     {
         [HttpGet]
-        public string Get([FromQuery] string name)
+        public string Get()
         {
-            return "Hello, " + (name ?? "World");
+            return "Hello, World";
         }
     }
 }
