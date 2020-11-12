@@ -15,5 +15,5 @@ Demo code for a [talk on GitHub Actions](https://osem.seagl.org/conferences/seag
 ### Code Deployment
 
 1. Build and publish to the `published/` directory: `dotnet publish --configuration Release --runtime centos.8-x64 --no-self-contained -o published src/Hello/Hello.csproj`
-1. `export USER_HOST=$USER@$HOST` (`$USER` e.g. `root` and `$HOST` being domain name or IP address of the host machine)
+1. Export environment variables `DEPLOY_USER` and `DEPLOY_HOST` (e.g. `export DEPLOY_USER=root` and `export DEPLOY_HOST=<host IP address>`)
 1. Deploy from the `published/` directory: `deploy/deploy.sh published` (assumes SSH keys are configured)
