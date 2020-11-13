@@ -1,5 +1,7 @@
 # GitHubActionsTalk
 
+![build](https://github.com/CBielstein/GitHubActionsTalk/workflows/build/badge.svg)
+
 Demo code for a [talk on GitHub Actions](https://osem.seagl.org/conferences/seagl2020/program/proposals/769) delivered at [SeaGL](https://seagl.org) 2020.
 
 ## Deployment
